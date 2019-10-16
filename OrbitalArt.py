@@ -35,7 +35,7 @@ class PVector:
         self.x = x
         self.y = y
     
-    def fromAngle(angle):
+    def fromAngle(self,angle):
         return PVector(cos(angle), sin(angle))
 
     def getAngle(self):
@@ -119,7 +119,7 @@ class Block:
         elif (self.pos.y -self.r <= 0 or self.pos.y + self.r >= h):
             self.vel.y *= -self.wall_res
 
-    def calculateVel(a,b):
+    def calculateVel(self,a,b):
         v1 = a.vel.mag()
         O1 = atan2(a.vel.y,a.vel.x)
         m1 = a.mass
