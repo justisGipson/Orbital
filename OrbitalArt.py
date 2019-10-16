@@ -28,11 +28,9 @@ def limit(x,m):
         if x != 0 and x != 1:
             x /= x
         x *= m
-
     return x
 
 class PVector:
-
     def _init_(self,x,y):
         self.x = x
         self.y = y
@@ -85,7 +83,6 @@ class PVector:
         return PVector(self.x, self.y)
 
 class Block:
-
     def _init_(self, pos, m, vel=PVector(0,0), acc=PVector(0,0), c=(200,200,200)):
         self.pos = pos
         self.vel = vel
