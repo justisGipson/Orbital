@@ -83,7 +83,7 @@ class PVector:
         return PVector(self.x, self.y)
 
 class Block:
-    def _init_(self, pos, m, vel=PVector(0,0), acc=PVector(0,0), c=(200,200,200)):
+    def _init_(self, pos, m, vel=PVector(), acc=PVector(), c=(200,200,200)):
         self.pos = pos
         self.vel = vel
         self.acc = acc
@@ -177,7 +177,7 @@ black = [0,0,0]
 G = 1 #45# is gold
 
 r = int(w/2 - 50)
-p1 = PVector.fromAngle(0)
+p1 = PVector.fromAngle(0,0)
 p1.mult(r)
 p2 = PVector.fromAngle((2*pi)/3)
 p2.mult(r)
