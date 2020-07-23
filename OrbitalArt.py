@@ -35,7 +35,7 @@ class PVector:
         self.x = x
         self.y = y
     
-    def fromAngle(self,angle):
+    def fromAngle(self, angle):
         return PVector(cos(angle), sin(angle))
 
     def getAngle(self):
@@ -192,7 +192,7 @@ p1.plus(PVector(int(w/2), int(w/2)))
 p2.plus(PVector(int(w/2), int(w/2)))
 p3.plus(PVector(int(w/2), int(w/2)))
 
-b1 = Block(             p1, 1, v1, c=red)
+b1 = Block(p1, 1, v1, c=red)
 b2 = Block(p2, 1, v2, c=green)
 b4 = Block(p3, 1, v3, c=blue)
 
