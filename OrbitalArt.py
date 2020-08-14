@@ -34,7 +34,7 @@ class PVector:
     def _init_(self,x,y):
         self.x = x
         self.y = y
-    
+
     def fromAngle(self, angle):
         return PVector(cos(angle), sin(angle))
 
@@ -43,7 +43,7 @@ class PVector:
 
     def mag(self):
         return sqrt(self.x*self.x + self.y*self.y)
-    
+
     def plus(self,v):
         self.x += v.x
         self.y += v.y
@@ -104,7 +104,7 @@ class Block:
     def draw(self):
         pygame.draw.circle(screen,self.color,(int(self.pos.x), int(self.pos.y)), self.r)
         pygame.draw.circle(screen,black,(int(self.pos.x), int(self.pos.y)), self.r,2)
-    
+
     def update(self):
         self.vel.plus(self.acc)
         self.pos.plus(self.vel)
@@ -136,7 +136,7 @@ class Block:
         vy = (((v1 * cos(O1 - phi) * (m1 - m2)) + (2 * m2 * v2 * cos(O2 - phi))) / (m1 - m2)) * sin(phi) + v1 * sin(O1 - phi) * sin(phi + pi/2)
 
         return PVector(vx, vy)
-    
+
 def bounce(a,b):
     d = a.pos.dist(b.pos)
     a_new_vel = a.vel
@@ -239,7 +239,7 @@ while True:
 
             if event.key == pygame.K_o:
                 print(G)
-            
+
             if event.key == pygame.K_UP:
                 FPS += 50
             if event.key == pygame.K_DOWN:
@@ -255,7 +255,7 @@ while True:
                 rapid = False
             if event.key == pygame.K_s:
                 FPS = 300
-    
+
     #screen.fill(gray)
 
     b1.run(w, h)
